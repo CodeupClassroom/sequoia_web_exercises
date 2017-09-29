@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Intro Lecture</title>
+
+	<!--Always link your stylesheet after any other style links last and before style tags!-->
+	<link rel="stylesheet" type="text/css" href="external.css">
+	<link rel="stylesheet" href="css-reset.css">
+
+	<!--
+
+		Order of priority
+
+		1) !important (AVOID THIS)
+		2) Inline styling
+		3) Embedded styling
+		4) External style sheet
+		5) id targeted
+		6) class targeted
+		7) element targeted
+		8) between two identical selector/property definitions, the last one defined
+
+	-->
+
+	<!-- embedded styling -->
+	<style type="text/css">
+
+		h1 {
+			color: blue;
+		}
+
+		.yellow {
+			color: yellow;
+		}
+
+		.green {
+			color: green;
+		}
+
+		#black {
+			color: black;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<!-- inline styling -->
+	<h1 style="color:red" class="green yellow" id="black">What color will I be?</h1>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
