@@ -3,38 +3,108 @@
 <head>
     <title>Veridian dynamics</title>
     <meta charset="UTF-8">
+
+    <style>
+        /* element selector */
+        body table{
+            color: aquamarine;
+            background: darksalmon;
+        }
+
+        /* Multiple Selector */
+        .purple, p {
+            text-decoration: underline;
+            color: cornflowerblue;
+        }
+
+        /* Id selector */
+        #core_values {
+            color: peachpuff;
+        }
+
+        .purple {
+            color: rebeccapurple;
+        }
+
+        .first_item {
+            font-weight: bold;
+        }
+
+        #plan {
+            font-family: fantasy;
+        }
+
+        /* descendant selector */
+        ol span {
+            font-family: "Comic Sans MS";
+            font-size: 4em;
+        }
+
+        /* direct child selector */
+        header>h1 {
+            background-color: lawngreen;
+            box-shadow: 10px 10px 5px yellow    ;
+
+        }
+
+
+
+
+
+
+        /* unvisited link (:link) */
+        a:link {
+            color:red;
+        }
+
+        /* visited link (:visited) */
+        a:visited {
+            color:black;
+        }
+
+        /* mouse hover over link (:hover) */
+        a:hover {
+            color:snow;
+            background-color: steelblue;
+        }
+
+        /* active/selected link (:active) */
+        a:active {
+            color:green;
+        }
+    </style>
 </head>
 <body>
 
 <header>
-    <h1 id="title">Welcome to Veridian Dynamics!</h1>
+    <h1>Welcome to Veridian Dynamics!</h1>
     <p>At Veridian Dynamics,
         <strong>we</strong>
         solve<i>your</i>
         problem with <b><i>technology</i></b>
-
     </p>
 </header>
 
+<h1><a href="#">Click here to speed up your computer</a></h1>
 <hr>
 
-<h2>Core Values</h2>
+<h2 id="core_values">Core Values</h2>
 <ul>
-    <li>Competence</li>
-    <li>Involvement</li>
-    <li>Technology</li>
+    <li class="purple first_item">Competence</li>
+    <li class="purple">Involvement</li>
+    <li class="purple">Technology</li>
 </ul>
 <h2>Our process</h2>
 <ol>
-    <li>Plan</li>
-    <li>Evaluate</li>
-    <li>Implement</li>
+    <li id="plan" class="purple first_item"><span>P</span></li>
+    <li class="purple">Evaluate</li>
+    <li class="purple">Implement</li>
 </ol>
 <h2>2020 Vision</h2>
 <ul>
-    <li>Become #1 in Technology</li>
-    <li>Increase success by 20%</li>
-    <li>Increase business by 30%</li>
+    <li class="purple first_item">Become #1 in <span>T</span>echnology</li>
+    <li class="purple">Increase success by 20%</li>
+    <li class="purple">Increase business by 30%</li>
 </ul>
 
 <hr>
