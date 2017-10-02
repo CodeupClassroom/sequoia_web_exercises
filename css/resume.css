@@ -3,6 +3,17 @@ body {
     padding: 5px;
 }
 
-h1 {
+h1, h3 {
     text-align: center;
+}
+
+p {
+    text-align: center;
+    text-decoration: underline;
+}
+
+li:hover {
+    font-size: 2em;
+    color: white;
+    background-color: navy;
 }
