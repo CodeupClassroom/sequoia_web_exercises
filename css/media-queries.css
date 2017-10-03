@@ -1,7 +1,12 @@
+/* Content box model => width = left border, padding left, width, padding right, border-right */
+
+/* Border box => width = left border, width, right border */
+
 /* Reset styles */
 html,
 body {
     margin: 0;
+    box-sizing: border-box;
     height: 100%;
     width: 100%;
     font-family: sans-serif;
@@ -20,7 +25,8 @@ h1 {
     text-align: center;
 }
 
-.alert-info > a {
+/* direct child selector */
+.nav-links>li {
     color: #000;
     text-decoration: none;
 }
@@ -33,12 +39,12 @@ h1 {
     background-color: #d3d3d3;
     padding: 1em;
     text-align: center;
-    margin-bottom: .5em;
+    /*margin-bottom: .5em;*/
     list-style: none;
 }
 
 .header-img img {
-    width: 100%;
+    width: 95%;
 }
 
 .sub-section {
@@ -48,34 +54,38 @@ h1 {
 /* Style definitions that target screens 768px and up */
 @media screen and (min-width: 768px) {
     body {
-        padding: 20px;
-        width: 100%;
+        padding: 1em;
     }
+
     .alert-info {
         display: none;
     }
 
     h1 {
-        text-align: left;
+        float: left;
     }
 
     .nav-links {
         text-align: right;
     }
+
     .nav-links li {
-        display: inline-block;
+        /*display: inline-block;*/
         float: right;
         background-color: transparent;
-        padding: .2em;
+        /*padding: .2em;*/
         line-height: 2em;
     }
 
     .main {
         float: left;
-        width: 65%;
+        width: 66%;
     }
     .sub-section {
+        font-style: normal;
         float: right;
         width: 33%;
     }
+
+
 }
