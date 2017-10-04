@@ -3,6 +3,10 @@
 /* Border box => width = left border, width, right border */
 
 /* Reset styles */
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
     margin: 0;
@@ -10,7 +14,6 @@ body {
     height: 100%;
     width: 100%;
     font-family: sans-serif;
-    padding: 5px;
 }
 
 h1 {
@@ -28,6 +31,7 @@ h1 {
 /* direct child selector */
 .nav-links>li {
     color: #000;
+    margin: 5px;
     text-decoration: none;
 }
 
@@ -39,12 +43,7 @@ h1 {
     background-color: #d3d3d3;
     padding: 1em;
     text-align: center;
-    /*margin-bottom: .5em;*/
     list-style: none;
-}
-
-.header-img img {
-    width: 95%;
 }
 
 .sub-section {
@@ -53,9 +52,6 @@ h1 {
 
 /* Style definitions that target screens 768px and up */
 @media screen and (min-width: 768px) {
-    body {
-        padding: 1em;
-    }
 
     .alert-info {
         display: none;
@@ -70,21 +66,19 @@ h1 {
     }
 
     .nav-links li {
-        /*display: inline-block;*/
-        float: right;
+        display: inline-block;
+        text-align: right;
         background-color: transparent;
-        /*padding: .2em;*/
+        padding: .2em;
         line-height: 2em;
     }
 
     .main {
-        float: left;
-        width: 66%;
+
     }
     .sub-section {
         font-style: normal;
-        float: right;
-        width: 33%;
+
     }
 
 

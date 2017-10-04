@@ -6,6 +6,10 @@
 /* Desktop First */
 /* styling for desktop < 1200px < 768px  */
 
+.column {
+    float: left;
+    padding: 10px;
+}
 
 .container {
     max-width: 1200px;
@@ -24,6 +28,7 @@
     clear: both;
 }
 
+.one-whole
 .two-thirds,
 .one-half,
 .one-third,
@@ -33,8 +38,6 @@
     float: left;
     width: 100%;
 }
-
-
 
 
 @media screen and (min-width: 768px) {
