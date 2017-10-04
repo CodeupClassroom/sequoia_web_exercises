@@ -1,0 +1,71 @@
+
+/* Mobile First */
+/* styling for mobile > 768px > 1200px */
+
+
+/* Desktop First */
+/* styling for desktop < 1200px < 768px  */
+
+
+.container {
+    max-width: 1200px;
+    min-height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.row {
+    width: 100%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.two-thirds,
+.one-half,
+.one-third,
+.one-fourth,
+.one-sixth,
+.one-eighth {
+    float: left;
+    width: 100%;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+
+    .two-thirds {
+        width: 66.6666%;
+    }
+    .one-half {
+        width: 50%;
+    }
+    .one-third {
+        width: 33.3333%;
+    }
+    .one-fourth {
+        width: 25%;
+    }
+    .one-sixth {
+        width: 16.6666%;
+    }
+    .one-eighth {
+        width: 12.5%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
