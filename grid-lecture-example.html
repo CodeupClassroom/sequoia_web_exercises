@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid Test</title>
+    <style>
+
+        body {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            min-height: 100vh;
+            width: 70%;
+            background-color: powderblue;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .row {
+            width: 100%;
+            background-color: lavender;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .col-1 {
+            width: 10%;
+            float: left;
+            background-color: darkseagreen;
+        }
+
+        .col-5 {
+            width: 50%;
+            float: left;
+            background-color: darkseagreen;
+        }
+
+        .col-offset-5 {
+            margin-left: 50%;
+        }
+
+        .box {
+            border: 1px solid black;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <div class="row">
+
+            <div class="col-5 box">
+                <h1>This is a row</h1>
+            </div>
+
+            <div class="col-5 box">
+                <h1>This is a row</h1>
+            </div>
+
+        </div>
+    </main>
+
+
+</body>
+</html>
