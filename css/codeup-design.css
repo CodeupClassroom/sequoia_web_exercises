@@ -1,0 +1,279 @@
+/* GENERAL ************************************************************* */
+
+body {
+    font-family: 'Abel', sans-serif;
+    background-color: #f0f0f0;
+}
+main {
+    margin-top: 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Anton', sans-serif;
+    color: black;
+    text-transform: uppercase;
+}
+
+h1 {font-size: 64px;}
+h2 {font-size: 48px;}
+h3 {font-size: 40px;}
+h4 {font-size: 32px;}
+h5 {font-size: 28px;}
+
+.container {
+    max-width: 992px;
+}
+.main-title {
+    padding: 20px 0;
+}
+hr {
+    border: 1px solid #ccc;
+}
+
+
+/* NAV ************************************************************* */
+
+nav {
+    margin-top: 40px;
+    background-color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    height: 100%;
+}
+.nav-text {
+    position: relative;
+    top: 2px;
+    color: black;
+}
+.left-logo {
+    float: right;
+}
+.right-logo {
+    float: right;
+}
+.logo-text {
+    font-size: 36px;
+    float: right;
+    padding-left: 14px;
+    text-transform: lowercase;
+}
+.logo {
+    height: 105px;
+    display: inline;
+    float: left;
+    position: relative;
+    bottom: 40px;
+}
+.body-text {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+
+/* CIRCLES ************************************************************* */
+
+.circle {
+    height: 112px;
+    width: 112px;
+    border-radius: 112px;
+    border: 6px solid white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.red-circle {
+    background-color: #e6563b;
+}
+.yellow-circle {
+    background-color: #eb9d3a;
+}
+.green-circle {
+    background-color: #7cb06c;
+}
+.blue-circle {
+    background-color: #00aba9;
+}
+.circle h5 {
+    color: white;
+    font-size: 20px;
+}
+.circle-row-padding {
+    padding: 30px 0 20px 0;
+}
+
+
+/* SIDE BAR ************************************************************* */
+
+.side-image {
+    margin-top: 10px;
+    width: 58px;
+    height: 58px;
+    background-position: center;
+    border: 2px solid #e6e6e6;
+    border-radius: 2px;
+    background-size: cover;
+}
+.side-image-1 {
+    background-image: url('../assets/images/mobile-phone.jpg');
+}
+.side-image-2 {
+    background-image: url('../assets/images/head.jpg');
+}
+.side-image-3 {
+    background-image: url('../assets/images/ipad.jpg');
+}
+.icon-circle {
+    height: 18px;
+    width: 18px;
+    border-radius: 18px;
+    font-weight: bold;
+    color: black;
+    font-size: 9px;
+    font-family: 'Anton', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    float: right;
+    margin-left: 6px;
+}
+.side-bar-text {
+    margin-left: 8px;
+}
+.side-row-style {
+    margin-bottom: 16px;
+}
+i {
+    font-size: 32px;
+    color: #1997F0;
+    position: relative;
+    top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.bolded-text {
+    font-weight: bold;
+}
+.project-img {
+    width: 100%;
+    height: 160px;
+    background-size: cover;
+    border: 5px solid #e6e6e6;
+    border-radius: 2px;
+}
+.project-img-1 {
+    background-image: url('../assets/images/apple-ipad.jpg');
+}
+.project-img-2 {
+    background-image: url('../assets/images/macbook.jpg');
+}
+.project-img-3 {
+    background-image: url('../assets/images/man.jpg');
+}
+.project-img-4 {
+    background-image: url('../assets/images/security.jpg');
+}
+.img-panel-box {
+    width: 90%;
+    padding-bottom: 40px;
+}
+.img-control-panel {
+    padding: 7px 0;
+}
+.title-margin {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+@media screen and (max-width: 992px) {
+
+    hr {
+        width: 60%;
+    }
+    .title-margin {
+        text-align: center;
+    }
+
+    /* MEDIA QUERY NAVBAR *********************************** */
+
+    nav {
+        height: 60px;
+    }
+    .logo {
+        float: none;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .logo-text {
+        float: none;
+        color: black;
+        position: relative;
+        top: -30px;
+    }
+    .left-logo {
+        float: left;
+    }
+    .right-logo {
+        float: right;
+    }
+    .main-title {
+        margin-top: 30px;
+    }
+    .nav-text {
+        position: relative;
+        top: 18px;
+    }
+    .logo-li {
+        position: relative;
+        top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .img-panel-box {
+        width: 100%;
+    }
+    .project-img {
+        height: 60vw;
+    }
+    .circle.red-circle {
+        float: right;
+        margin-bottom: 10px;
+    }
+    .circle.green-circle {
+        float: right;
+    }
+    .circle.yellow-circle {
+        float: left;
+        margin-bottom: 10px;
+    }
+    .circle.blue-circle {
+        float: left;
+    }
+    .mobile-nav {
+        position: relative;
+        bottom: 30px;
+    }
+    .main-title {
+        margin-top: 80px;
+    }
+    .logo {
+        position: relative;
+        top: -14px;
+    }
+    .logo-text {
+        position: relative;
+        top: 0px;
+    }
+
+}
