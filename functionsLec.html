@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions Lecture</title>
+</head>
+<body>
+    <h1>Functions Lecture</h1>
+
+<script>
+
+
+
+
+    (function(){  // IIFE
+
+    "use strict";
+
+    // =========================================== DEFINING/USING FUNCTIONS
+
+    // creating a function
+
+    /*
+
+        FUNCTION DECLARATION SYNTAX
+
+        function doSomething() {
+            // doing something...
+        }
+
+
+        FUNCTION EXPRESSION SYNTAX
+
+        var someVariable = function() {
+            // do something
+        };
+
+     */
+
+    // Function declaration
+    function sayHello(greeting) {
+        return greeting;
+    }
+
+    // Function expression
+    var sayHello = function(greeting) {
+        return greeting;
+    };
+
+
+//    console.log(sayHello("Howdy"));
+
+    function increaseNumber(bob) {
+        bob += 2;
+        bob += 4;
+        bob += 8;
+
+        return bob;
+    }
+
+//    console.log(increaseNumber(5));
+
+
+
+
+    // using a function
+
+    function bark(someSound) {
+        return "The dog says: " + someSound;
+    }
+
+//    console.log(bark("hello"));
+
+
+
+    // without the parentheses: the function definition
+//    console.log(bark());
+
+
+
+
+
+    // assigning a function value vs. assigning the function to a variable
+
+    var dogMessage = bark("woof!");
+//    console.log(dogMessage);
+
+    var dogMessageFunction = bark;
+
+//    console.log(dogMessageFunction("WOOF!!!"));
+
+
+
+    // =========================================== PARAMETERS / ARGUMENTS
+
+    // defining parameters
+
+    function addFive(number) {
+        return number + 5;
+    } // an actual value passed into the function is called an argument
+
+
+//    console.log(addFive("10")); // 10 is argument
+
+
+    // defining multiple parameters
+
+//    function talkingDog(dogWords, punctuation) {
+//        return "The dog barks loudly, " + dogWords + punctuation;
+//    }
+//
+//    console.log(talkingDog("bow wow", "!!!!!"));
+
+
+
+    // functions with no return value
+
+    function consolesOutHello() {
+        console.log("Hello");
+    }
+
+//    consolesOutHello();
+
+
+// =========================================== ADDITIONAL USES
+
+/* What we covered so far...
+
+    - the why and how for functions
+    - defining functions using declaration and expression syntax
+    - using console.logs to debug code
+    - returning output from a function
+    - input: defining properties and passing in arguments
+    - passing a function definition to another variable
+
+*/
+
+
+// assigned to a variable
+
+//function sayYes() {
+//    return "yes";
+//}
+//
+//var yes = sayYes;
+//
+//console.log(yes());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// definition passed to another function to call (callback function)
+
+//    function returnFive() {
+//        return 5;
+//    }
+//
+//    function addTwo(numberMakingFunction) {
+//        return numberMakingFunction() + 2;
+//    }
+//
+//    console.log(addTwo(returnFive()));
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// common callback example using anonymous or callback function
+
+//    setTimeout(function() {
+//        console.log("Hello");
+//    }, 1000);
+//
+
+
+
+    // OR...
+
+//    function sayHello() {
+//        console.log("Hello");
+//    }
+//
+//    setTimeout(sayHello, 1000);
+
+
+
+
+
+
+
+
+
+
+
+// returned as a value from another function
+
+//    function happy() {
+//        console.log("I'm happy!");
+//    }
+//
+//    function notHappy() {
+//        console.log("I'm NOT happy!");
+//    }
+//
+//    function chooseMessage(mood) {
+//        var result;
+//
+//        if (mood === "happy") {
+//            result = happy;
+//        } else {
+//            result = notHappy;
+//        }
+//
+//        return result;
+//    }
+//
+//    var sayMessage = chooseMessage("sad");
+
+//    sayMessage(); // same as if I called notHappy();
+
+
+
+
+
+
+
+
+
+
+
+// recursion
+
+//    function songThatNeverEnds() {
+//        console.log("...this is the song that never ends "
+//            + "and it goes on an my friend. "
+//            + "Some people, started singing it not knowing what it was, "
+//            + "and they'll continue singing it forever just because...");
+//        songThatNeverEnds();
+//    }
+//
+//    songThatNeverEnds();
+
+
+
+
+
+
+
+
+
+
+
+
+// =========================================== SCOPE
+
+
+// global vs. local scope
+
+//    var globalVar = "Look, I'm Global!"; // declare a global variable
+//
+//    function scopeExample() {
+//        var localVar = "Look, I'm Local!"; // declare a local variable
+//        alert(localVar); // localVar is accessible here
+//        alert(globalVar); // globalVar is accessible here
+//    }
+//
+//    scopeExample();
+//    alert(localVar); // localVar is NOT accessible here and this will produce an error
+//
+//
+//
+//
+
+
+
+
+
+
+
+
+
+// over-writing global/local variables
+
+    var x = 300;
+    var y = 100;
+
+    function scopeExample() {
+        var x = 1;
+        var y = 2;
+        console.log('x: ' + x + ' y: ' + y); // x: 1 y: 2
+        return x + y;
+    }
+
+//    scopeExample();
+
+    console.log('x: ' + x + ' y: ' + y); // x: 300 y: 100
+
+
+
+
+
+
+
+
+
+// IIFE
+
+// Used to protect code from the global scope
+
+
+
+
+    })(); // end of IIFE
+
+</script>
+
+</body>
+</html>
