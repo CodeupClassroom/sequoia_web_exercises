@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Conditionals</h1>
+    <script type="text/javascript">
+        
+        "use strict";
+
+        // "getting stuck" => trying to do too much at one time..
+        // "getting stuck" == "doing things unconditionally"
+
+        // conditionals give us different roads...
+        // "if" on its own is
+
+
+        var number = prompt("please input a number");
+
+        if(!isNaN(number)) {
+            console.log("Your number plus 100 is " + (parseFloat(number) + 100));
+
+            var isNegative = number < 0;
+            console.log("It is " + isNegative + " that your number is negative");
+        }
+
+
+        var todayIsFriday = true;
+        var todayIsTheThirteenth = true;
+
+        if(todayIsFriday && todayIsTheThirteenth) {
+            console.log("OMG that's scary, go watch a scary movie!");
+        } else if(todayIsFriday) {
+            console.log("TGIF, I'm gonna go watch Full House");
+        } else if(todayIsTheThirteenth) {
+            console.log("Cool, 13 is a prime number and that's awesome!");
+        } else {
+            console.log("Today aint the 13th or a friday, but darn it if it aint a great day for JS!");
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
