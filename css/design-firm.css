@@ -1,0 +1,76 @@
+/**
+ * Custom CSS for the "Codeup Design" Exercise
+ * Mobile responsive, bootstrap grids
+ * Specs, wireframes, and assets at http://java.codeup.com/html-css/css-ii/bootstrap-grid-system/
+ */
+
+
+body {
+    background-color: #F0F0F0;
+}
+
+nav {
+    background-color: white;
+    height: 3em;
+    margin-top: 30px;
+}
+
+li {
+    display: inline-block;
+    margin: 10px;
+    float: right;
+}
+.navbar-default {
+    background-color: white;
+    /*height: 3em;*/
+}
+
+#logo {
+    height: 105px;
+    width: 105px;
+    float: left;
+}
+
+nav h2 {
+    font-family: 'Abel', sans-serif;
+    float: left;
+}
+
+.featured {
+    height: 200px;
+    width: 300px
+}
+
+
+.intro {
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+}
+
+
+.circle {
+    margin: 15px;
+    border: 10px solid white;
+    float: left;
+    color: white;
+    height: 100px;
+    width: 100px;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.circle:nth-child(1) {
+    background: red;
+}
+
+.circle:nth-child(2) {
+    background: orange;
+}
+
+.circle:nth-child(3) {
+    background: green;
+}
+
+.circle:nth-child(4) {
+    background: teal;
+}
