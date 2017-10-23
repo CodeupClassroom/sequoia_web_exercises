@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM Lecture</title>
+</head>
+<body>
+    <h1>BOM Lecture</h1>
+
+<script>
+
+    "use strict";
+
+    /*
+        ================================= BROWSER OBJECT MODEL (BOM)
+
+        BOM = hierarchy of objects that make up the browser
+
+
+        Highest level object: window object
+
+
+        Main objects nested within the window object:
+
+            document  - a tree of elements of the current page
+            navigator - contains information about the browser itself
+            location  - contains information about the current url
+            history   - an object that contains a history of visited url with methods to traverse history
+            screen    - an object that contains information about the current browser dimensions
+
+            additional information: https://www.w3schools.com/js/js_ex_browser.asp
+
+        Important methods within the window object:
+            Dialogue functions: alert(), confirm(), prompt()
+            setInterval() - starts an interval that can execute a repeated process
+            setTimeout() - starts a timer after which a process may execute
+
+        Location object:
+
+            Redirect to another page or reload the current page
+
+    */
+
+
+
+    /*
+        ================================= setInterval()
+
+        Set interval method:
+
+        Real world application:
+            slide show animation
+            music sequencer
+            AJAX requests
+
+        ** see example **
+    */
+
+    // create interval to say howdy 10 times
+
+       var interval = 200;
+
+       var i = 1;
+
+       var intervalId = setInterval(function(){
+
+           if (i === 10) {
+               clearInterval(intervalId);
+           }
+
+           console.log("Howdy!!!");
+
+           ++i;
+
+       }, interval);
+
+       console.log(intervalId);
+
+
+
+    /*
+        ================================= setTimeout()
+            
+            Real world application:
+
+            session time out (online banking)
+            pop up window  -  https://ambitionally.com/popupally/sample-time/
+    */
+    
+
+    // create pop up ad after 3 seconds
+
+       var x;
+
+       var wait = 1;
+
+       var timeoutId = setTimeout(function() {
+
+           alert("You WON $1,000,000.00 !!!!");
+
+           var x = 23;
+
+       }, wait);
+
+
+        console.log(x);
+
+
+    // asynchronous errors
+
+       console.log(x); // undefined error
+
+       if (x !== undefined) { // no output
+           console.log(x);
+       }
+
+
+      
+    // ================================= Location object
+
+    // Redirect
+
+        window.location = "https://www.google.com";
+
+
+    // Reload page
+
+
+       location.reload();
+
+       location.reload(true);
+
+    
+</script>
+
+</body>
+</html>
