@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Document Object Model (DOM)</h1>
+    <form name="login">
+        <div>
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password">
+        </div>
+        <div>
+            <button type="submit" id="login">Login</button>
+        </div>
+    </form>
+
+    <h2>Languages list</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Java</li>
+        <li>MySQL</li>
+    </ul>
+
+
+    <script>
+        "use strict";
+
+        var username = document.getElementById("username");
+        var password = document.getElementById('password');
+
+        document.getElementById('login').addEventListener('click', function(event) {
+            event.preventDefault();
+            console.log("username is " + username.value);
+            console.log("password is " + password.value);
+        });
+
+
+        // Iterating through a list
+        var listItems = document.getElementsByTagName("li");
+
+        for(var i = 0; i < listItems.length; i++) {
+            console.log(listItems[i].innerText);
+        }
+
+
+    </script>
+</body>
+</html>
