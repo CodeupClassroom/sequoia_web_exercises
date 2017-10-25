@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+
+    <title>Google Maps Test</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <style>
+
+        #map {
+            width: 80vw;
+            height: 500px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <main class="container">
+
+        <h1 class="text-center">Google Maps Test</h1>
+
+        <br>
+
+        <div class="center-block" id="map"></div>
+
+    </main>
+
+    <!-- jQuery Version 2.2.4 -->
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKKYyyL0qO5WPswp3g3vmiicZbi2ESGrw"></script>
+
+    <!-- Custom JS -->
+    <script>
+
+        "use strict";
+
+        // ============== BUILD MAP
+        var mapOptions = {
+            zoom: 10,
+            center: {
+                lat:  29.426791,
+                lng: -98.489602
+            }
+        };
+
+        var restaurant = {
+            name: "Chama Gaucha",
+            address: "18318 Sonterra Pl, San Antonio, TX 78258",
+            info: "The best food ever!"
+        };
+
+        function initMap(optionsObject) {
+            return new google.maps.Map(document.getElementById("map"), optionsObject);
+        }
+
+        var map = initMap(mapOptions);
+
+
+        //  ============== GEOCODING
+
+        function getLocation(address) {
+
+            var geocoder = new google.maps.Geocoder();
+
+            geocoder.geocode({address: address}, function(results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    var position = results[0].geometry.location;
+                    addMarkerAndInfoWindow(position, restaurant.name, restaurant.info);
+                } else {
+                    alert("Geocoding unsuccessful");
+                }
+            });
+
+        }
+
+        getLocation(restaurant.address);
+
+
+        //  ============== ADD MARKER AND INFO WINDOW
+
+        function addMarkerAndInfoWindow(position, name, infoText) {
+            console.log(position);
+            console.log(name);
+            console.log(infoText);
+
+
+            var marker = new google.maps.Marker({
+                position: position,
+                map: map
+            });
+
+            var infoWindowContent = '<h3>' + name + '</h3>';
+            infoWindowContent += '<p>' + infoText + '</p>';
+
+            var infoWindow = new google.maps.InfoWindow({
+                content: infoWindowContent
+            });
+
+            infoWindow.open(map, marker);
+             
+        }
+
+    
+
+    </script>
+
+</body>
+</html>
