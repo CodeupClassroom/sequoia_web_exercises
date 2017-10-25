@@ -16,6 +16,7 @@
 
         #map {
             width: 80vw;
+            height: 500px;
         }
 
     </style>
@@ -40,7 +41,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- Google Maps -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY_GOES_HERE!!!"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKKYyyL0qO5WPswp3g3vmiicZbi2ESGrw"></script>
 
     <!-- Custom JS -->
     <script>
@@ -75,23 +76,27 @@
 
             var geocoder = new google.maps.Geocoder();
 
-            geocoder.geocode({address: placeObj.address}, function(results, status) {
+            geocoder.geocode({address: address}, function(results, status) {
                 if (status == google.maps.GeocoderStatus.OK) {
                     var position = results[0].geometry.location;
-                    return position;
+                    addMarkerAndInfoWindow(position, restaurant.name, restaurant.info);
                 } else {
-                    return alert("Geocoding unsuccessful");
+                    alert("Geocoding unsuccessful");
                 }
             });
 
         }
 
-        addMarkerAndInfoWindow(getLocation(restaurant.address), restaurant.name, restaurant.info);
+        getLocation(restaurant.address);
 
 
         //  ============== ADD MARKER AND INFO WINDOW
 
         function addMarkerAndInfoWindow(position, name, infoText) {
+            console.log(position);
+            console.log(name);
+            console.log(infoText);
+
 
             var marker = new google.maps.Marker({
                 position: position,
