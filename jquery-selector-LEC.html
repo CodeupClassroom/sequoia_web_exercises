@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>jQuery Selectors Lecture</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <style>
+
+        h1 {
+            background-color: aquamarine;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<main class="container">
+
+    <h1>jQuery Selectors Lecture</h1>it sgit
+
+    <h3>Best Bond Films</h3>
+    <ol>
+        <li>Casino Royal</li>
+        <li>Skyfall</li>
+        <li>Goldfinger</li>
+        <li>The Living Daylights</li>
+        <li>Goldeneye</li>
+    </ol>
+    <br>
+    <div id="someDiv">This is a div.</div>
+    <br>
+    <p class="paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias aliquam, blanditiis consequuntur cum cumque delectus, eos et harum illum inventore ipsa laudantium, magni numquam obcaecati sapiente sunt veritatis! Fugiat!
+    </p>
+
+    <p class="paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio dolor, est expedita hic, inventore ipsa laboriosam laborum laudantium necessitatibus nisi nostrum nulla, omnis pariatur qui quis quo recusandae suscipit unde!
+    </p>
+
+
+</main>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- Custom JS -->
+<script>
+
+    $(document).ready(function() {
+        "use strict";
+
+        // ===================================== SELECTORS
+
+        var element = $("h1"); // select tag
+        var element = $(".paragraph"); // select class
+        var element = $("#someDiv"); // select id
+        var element = $("#someDiv"); // select id
+        var element = $("li, .paragraph"); // select combinations
+        var element = $("*"); // select all
+
+        console.log(element);
+
+
+        // ===================================== GETTING A VALUE
+
+        var element = $("body"); // select tag
+        console.log(element.html());
+
+
+        // ===================================== CHANGING A VALUE
+
+        // HTML
+            element.html("Canada");
+
+        // Text
+            element.text("Canada");            
+
+        // single CSS property
+            element.css("background-color", "red");
+
+        // multiple CSS properties
+            element.css({
+                "background-color": "red",
+                "color": "yellow"
+            });
+
+    });
+
+</script>
+
+</body>
+
+</html>
