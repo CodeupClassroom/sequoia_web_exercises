@@ -15,10 +15,11 @@ $(document).ready(function() {
         // reset any invalid styles
         $('input').css('color', 'black');
         $('input').css('outline', 'none');
+        errorsDiv.css('display', 'none');
 
         if (inputs.username.val().length < 5) {
-            inputs.username.css('color', 'red')
-            input.username.css('outline', '1px solid red');
+            inputs.username.css('color', 'red');
+            inputs.username.css('outline', '1px solid red');
             errors.push('Username must more than 5 characters');
         }
 
@@ -33,7 +34,6 @@ $(document).ready(function() {
         if (errors.length === 0) {
             alert('All good!');
         } else {
-            console.log('showing errors...')
             var htmlContent = '<ul>';
             errors.forEach(function(error) {
                 htmlContent += '<li>' + error + '</li>';
