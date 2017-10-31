@@ -1,29 +1,60 @@
 'use strict';
-
-// When the konami code is entered, alert a message
-//
-// What is the konami code? a sequence of keypresses
-//  - array of keypresses (keycodes)
-//  - inside my keyup, console.log the keycodes for the konami code
-
-// When the user pushes the keys in sequence that correspond to the konami code,
-// alert
-// Whenever a key is pressed, check if that kepress is in the konami code
-// - check the keypresses in sequence
-// - some way to track where I am in the konami code array, and variable to
-//   represent our index
-
-// When a key is pressed, what do we need to do?
-// - check if the key pressed is "correct"
-//  - if it's correct, move on to the next key
-//  - else, "reset"
-// check and see if we're finished
-
+/**
+ * Some JS code that will listen for the konami code, defined in the variable
+ * `konamiCode`.
+ *
+ * We'll create a variable `codeIndex` to keep track of where we are in the
+ * process of entering the code. Everytime a key is pressed, we'll check and
+ * see if the keypressed is the next code in the sequence. If it is, increment
+ * out index variable, that is, move to the next key in the sequence.
+ */
 $(document).ready(function() {
+    var keys = {
+        up: 38,
+        down: 40,
+        left: 37,
+        right: 39,
+        b: 66,
+        a: 65,
+        enter: 13
+    };
 
-    // This code runs whenever a key is pressed
-    $(document).keyup(function(e) {
+    var konamiCode = [
+        keys.up,
+        keys.up,
+        keys.down,
+        keys.down,
+        keys.left,
+        keys.right,
+        keys.left,
+        keys.right,
+        keys.b,
+        keys.a,
+        keys.enter
+    ];
+
+    var codeIndex = 0;
+
+    $(document).on('keyup', function(e) {
+        var keyPressed = e.keyCode;
+        var currentKey = konamiCode[codeIndex];
+
+        // show what key was pressed
+        $('#key-display').html(e.key);
+
+        if (keyPressed === currentKey) {
+            // correct key in the sequence, move to the next one
+            codeIndex++;
+        } else {
+            // incorrect key press, reset where we are in the code
+            codeIndex = 0;
+        }
+
+        // check if we're finished
+        if (codeIndex === konamiCode.length) {
+            alert('+30 lives!');
+        }
 
     });
-
 });
+
