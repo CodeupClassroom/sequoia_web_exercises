@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Methods Exercise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <style type="text/css">
+
+        .invisible {
+            color: transparent;
+        }
+
+        dt {
+            text-decoration: underline;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+
+        /* Bonuses */
+
+        .frame {
+            border: 10px solid brown;
+            height: 250px;
+        }
+
+        .picture1 {
+            background-image: url("./images/denali1.jpg");
+            background-size: cover;
+        }
+
+        .picture2 {
+            background-image: url("./images/denali2.jpg");
+            background-size: cover;
+        }
+
+        .picture3 {
+            background-image: url("./images/denali3.jpg");
+            background-size: cover;
+        }
+
+    </style>
+</head>
+<body>
+
+<main class="container">
+
+
+
+    <h1>Top Ten Questions about Glacier National Park</h1>
+
+    <dl>
+        <dt>Where is Glacier National Park located?</dt>
+        <dd class="invisible">Glacier National Park is located in northwestern Montana on the U.S./Canadian border. Access to the park from the east and west is along U.S. Highway 2. Park headquarters is located in West Glacier.</dd>
+        <dt>When is the park open?</dt>
+        <dd class="invisible">Glacier National Park is open year-round, 24 hours a day. In the fall winter and spring, some roads are inaccessible by car due to snow.</dd>
+        <dt>What does it cost to enter the park?</dt>
+        <dd class="invisible">Glacier National Park is open year-round, 24 hours a day. In the fall winter and spring, some roads are inaccessible by car due to snow.</dd>
+        <dt>Where are the closest airports to the park? Is there transportation from the airports to the park?</dt>
+        <dd class="invisible">Glacier Park International Airport in Kalispell, Montana is 25 miles west of park headquarters in West Glacier, Montana.
+
+            There are also airports in Great Falls, Montana (200 miles east of West Glacier)and Missoula, Montana (156 miles south of West Glacier).
+
+            Car rentals are available at airports. Shuttles are available at the Kalispell airport.</dd>
+        <dt>What is the closest train station to the park?</dt>
+        <dd class="invisible">Amtrak rail lines parallel the southern and southwestern borders of the park. Amtrak stops at West Glacier (Belton), East Glacier (summer only), and Essex (upon request).</dd>
+        <dt>What transportation is available within the park?</dt>
+        <dd class="invisible">In addition to private automobiles, guided tours are available in the main sections of the park. Contact Glacier Park, Inc. and Sun Tours for information (see addresses and telephone numbers below). Rental cars are available in neighboring communities.
+
+            Glacier Park, Inc.
+            1850 North Central Avenue
+            Phoenix, Arizona 85077-0928
+            (602)207-6000
+
+            Sun Tours
+            29 Glacier Avenue
+            East Glacier Park, Montana 59434
+            (800)786-9220
+
+        </dd>
+        <dt>Where are the visitor centers located in the park?</dt>
+        <dd class="invisible">Visitor centers are located in Apgar, Logan Pass, and St. Mary. Each of these visitor centers, as well as the Many Glacier and Two Medicine Ranger Stations, have park rangers on duty throughout the summer months to answer questions and provide information. During the winter months, Apgar Visitor Center is open on week-ends.
+
+        </dd>
+        <dt>Do you have campgrounds in the park? Can I make a reservation?</dt>
+        <dd class="invisible">Glacier National Park has 13 campgrounds, which provide just over 1000 campsites. Most of the campgrounds are operated on a "first come, first serve" basis. Fish Creek and St. Mary Campgrounds will be available for reservation by calling 1-800-365-2267. Click here for more detailed information on camping.
+
+            Winter primitive camping is available in the Apgar Picnic Area and in the St. Mary Campground.</dd>
+        <dt>Is it possible to reserve a backcountry campsite?</dt>
+        <dd class="invisible">Reservations for backcountry campsites may be made in advance, beginning April 1 for the upcoming summer. For further information on backcountry camping and for making reservations, visit our website section on Backcountry Camping.</dd>
+        <dt>Can I drive my RV along the Going-to-the-Sun Road?</dt>
+        <dd class="invisible">Vehicles, and vehicle combinations, longer than 21 feet (including bumpers) or wider than 8 feet (including mirrors) are prohibited between Avalanche Campground and the Sun Point parking area. You may however, drive to Avalanche if traveling east, and to Sun Point, if traveling west. Vehicles over 10 feet in height may have difficulty driving west from Logan Pass due to rock overhangs. Stock trucks and trailers may access Packers Roost and Siyeh Bend.</dd>
+    </dl>
+
+    <button id="toggleAnswersBtn">Toggle Answers</button>
+
+
+    <!-- jQuery Traversal Exercise -->
+
+    <h3>Denali National Park</h3>
+    <ul>
+        <li>DNP is home to the highest peak in North America, Denali. Called "The High One" in language of the Athabascan tribe, this towering peak stands at 20,320 feet above sea level.</li>
+        <li>The year of 1910 marked the first time that anyone had successfully summited Denali. It was a group of local residents who celebrated with hot chocolate and donuts.</li>
+        <li>Sable Pass inside DNP is known to be the best area to spot massive grizzly bears.</li>
+        <li>There are 169 different bird species, 39 mammal species, 14 fish species, and one species of amphibian known in Denali, whilst the park is also home to 1,500 species of vascular plants, lichens and mosses.</li>
+    </ul>
+
+
+    <h3>Yellowstone National Park</h3>
+    <ul>
+        <li>World's First National Park.</li>
+        <li>A designated World Heritage Site and designated Biosphere Reserve.</li>
+        <li>3,472 square miles or 8,987 square km.</li>
+        <li>96 % in Wyoming an 3 % in Montana.</li>
+    </ul>
+
+    <h3>Yosemite National Park</h3>
+    <ul>
+        <li>El Capitan is the largest granite monolith in the world. It rises more than 3,000 feet above the valley floor and is a favorite for experienced rock climbers.</li>
+        <li>Yosemite Falls: This is the tallest waterfall in North America. Snow runoff cascades down the 2,425 foot drop, with peak flow in May. In winter, an ice cone is often visible at the top of the falls.</li>
+        <li>Giant Sequoias and Mariposa Grove: Mariposa Grove contains about 500 mature giant sequoias. </li>
+        <li>There are 840 miles of trails to hike in Yosemite National Park</li>
+    </ul>
+
+    <button id="highlightBtn">Highlight</button>
+
+    <!-- jQuery Traversal Bonus -->
+    <div class="row">
+        <div class="col-md-4">
+            <div class="frame picture1"></div>
+            <button id="leftSwapBtn" class="pictureBtn btn btn-warning center-block">Swap</button>
+        </div>
+        <div class="col-md-4">
+            <div class="frame picture2"></div>
+            <button id="middleSwapBtn" class="pictureBtn btn btn-warning center-block">Swap</button>
+        </div>
+        <div class="col-md-4">
+            <div class="frame picture3"></div>
+            <button id="rightSwapBtn" class="pictureBtn btn btn-warning center-block">Swap</button>
+        </div>
+    </div>
+
+</main>
+
+
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    // Traversal exercise
+    $(document).ready(function() {
+
+        "use strict";
+
+        // ============================================== For Attributes and CSS Lesson
+
+        $('#toggleAnswersBtn').click(function(e) {
+            $("dd").toggleClass("invisible");
+        });
+
+        // bonus
+        $("dt").click(function() {
+            $(this).css("background-color", "yellow");
+        });
+
+        // ============================================== For Traversal Lesson
+
+        // Highlight last li of each ul element
+
+
+        // Make h3 font bold on click
+
+
+        // Make the first li turn blue when clicking an li
+
+
+        // =============================================== TRAVERSAL BONUS
+
+        $('#leftSwapBtn').click(function() {
+            var oldClass = $(this).prev().attr("class").split(" ")[1];
+            var newClass = $(this).parent().next().children().first().attr("class").split(" ")[1];
+            $(this).prev().attr("class", "frame " + newClass);
+            $(this).parent().next().children().first().attr("class", "frame " + oldClass)
+        });
+
+        $('#middleSwapBtn').click(function() {
+            var choice = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
+            var frameChoice = (choice) ? $(this).parent().prev() : $(this).parent().next();
+            var oldClass = $(this).prev().attr("class").split(" ")[1];
+            var newClass = frameChoice.children().first().attr("class").split(" ")[1];
+            $(this).prev().attr("class", "frame " + newClass);
+            frameChoice.children().first().attr("class", "frame " + oldClass)
+        });
+
+        $('#rightSwapBtn').click(function() {
+            var oldClass = $(this).prev().attr("class").split(" ")[1];
+            var newClass = $(this).parent().prev().children().first().attr("class").split(" ")[1];
+            $(this).prev().attr("class", "frame " + newClass);
+            $(this).parent().prev().children().first().attr("class", "frame " + oldClass)
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
