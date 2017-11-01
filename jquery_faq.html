@@ -170,12 +170,30 @@
         // ============================================== For Traversal Lesson
 
         // Highlight last li of each ul element
+        var highLightBtn = $('#highlightBtn');
 
 
-        // Make h3 font bold on click
+        highLightBtn.click(function() {
+
+            $('ul').each(function(index, element){
+                $(element).children().last().css("background-color", "yellow");
+            });
+
+        });
 
 
-        // Make the first li turn blue when clicking an li
+        // Make the ul li's bold when clicking the corresponding h3
+        $('h3').click(function() {
+            $(this).next().children().css("font-weight", "bold");
+        });
+
+
+
+        // Make the first li turn blue when clicking an li in a given ul
+        $('li').click(function() {
+            $(this).parent().children().first().css("color", "blue");
+        });
+
 
 
         // =============================================== TRAVERSAL BONUS
