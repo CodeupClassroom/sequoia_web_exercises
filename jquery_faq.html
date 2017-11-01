@@ -47,9 +47,31 @@
 
 <main class="container">
 
+    <div>
+        <h1>Would you like to sign up for our newsletter? <span><sup>X</sup></span></h1>
+    </div>
 
+    <!-- Bonuses -->
+
+    <!-- modal -->
+    <!-- <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="myModal">
+        <div class=" modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="text-center">Please Register</h2>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- alert box -->
+    <!-- <div id="alert" class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        Would you like to sign up for our newsletter?
+    </div> -->
 
     <h1>Top Ten Questions about Glacier National Park</h1>
+    <h2 id="register">Please register!</h2>
 
     <dl>
         <dt>Where is Glacier National Park located?</dt>
@@ -220,6 +242,33 @@
             $(this).prev().attr("class", "frame " + newClass);
             $(this).parent().prev().children().first().attr("class", "frame " + oldClass)
         });
+
+        // ============================================ jQuery Effects Lesson
+
+        // click X to hide the div containing h1 and span elements
+        $("span").click(function() {
+            $(this).parent().hide();
+        });
+
+        // click h3 to toggle a slide effect for the unordered list after the clicked h3
+        $("ul").hide();
+        $("h3").click(function() {
+            $(this).next().slideToggle();
+        });
+
+        // fade h2 in after 2 seconds
+        $("#register").hide().delay(2000).fadeIn();
+
+
+        // BONUSES
+
+        // Fade in the register alert
+        $("#alert").hide().delay(2000).fadeIn();
+
+        // Pop up modal
+        setTimeout(function() {
+            $("#myModal").modal("show");
+        }, 2000);
 
     });
 
