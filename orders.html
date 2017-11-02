@@ -47,41 +47,15 @@
 
 			"use strict";
 
-			function updatePage() {
-				var ajaxRequest = $.ajax("./data/orders.json");
+			function makeRequestAndUpdatePage() {
 
-				ajaxRequest.done(function(data, status, jqXhr) {
-					console.log("test");
-					console.log(data);
-					buildHTML(data);
-				});
-				
-				ajaxRequest.fail(function(jqXhr, status, error) {
-					console.log(jqXhr); // jQuery XMLHttpRequest object
-					console.log(status);
-					console.log(error);
-				});
 			}
 
 			function buildHTML(orders) {
-				var ordersHTML = "";
 
-				orders.forEach(function(order) {
-					ordersHTML += "<section>";
-					ordersHTML += "<h3>" + "Order #" + order.orderNumber + "</h3>";
-					ordersHTML += "<dl>";
-					ordersHTML += "<dt>" + "Item Ordered" + "</dt>";
-					ordersHTML += "<dd>" + order.itemOrdered + "</dd>";
-					ordersHTML += "<dt>" + "Ordered by" + "</dt>";
-					ordersHTML += "<dd>" + order.orderedBy + "</dd>";
-					ordersHTML += "</dl>";
-					ordersHTML += "</section>";
-				});
-
-				$('#orders').html(ordersHTML);
 			}
 
-			$('#update').click(updatePage);
+			$('#update').click(makeRequestAndUpdatePage);
 
 		});
 
