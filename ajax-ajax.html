@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: black;
+            color: #FEC;
+        }
+        .ajax {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #left:hover, #right:hover {
+            opacity: 0.9;
+        }
+
+    #left:active, #right:active {
+            opacity: 0.5;
+        }
+        p {
+            font-size: 1.5em;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="ajax col-md-3">
+    <img id="left" class="pull-left" src="./images/ajax.jpg">
+</div>
+<div id="content" class="col-md-6">
+    <h1>Hi, everybody!</h1>
+    <br>
+    <br>
+    <h4><-- Click the bust of Ajax on the left to get a special quote</h4>
+    <br>
+    <h4 class="pull-right">&nbsp;Click the the bust of Ajax on the right for a programming quote --></h4>
+</div>
+<div class="ajax col-md-3">
+    <img id="right" class="pull-right" src="./images/ajax3.png">
+</div>
+
+<main class="container col-md-6 col-md-offset-3">
+    <div id="output"></div>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="./js/ajax-ajax.js">
+
+</script>
+</body>
+</html>
