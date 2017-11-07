@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather-Map API Mashup</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .map {
+            background-color: gray;
+            height: 300px;
+            widgh: 500px;
+        }
+    </style>
+</head>
+<body>
+<noscript><h1>Enable JavaScript to use this application.</h1></noscript>
+
+<nav></nav>
+    <main class="container">
+        <h1 id="location">Location not yet selected</h1>
+        <div class="weather">
+            <div class="row">
+            <section class="forecast col-md-8">forecast stuff</section>
+            <section class="col-md-4">
+
+                <form class="form-horizontal" action="">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Location</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">lat/long</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                    </div>
+
+                    <div class="radio">
+                        <label class="radio-inline">
+                            <input type="radio" name="units" value="metric">Metric
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="units" value="imperial" checked>Imperial
+                        </label>
+                    </div>
+                    
+                    <label for="days">Number of days</label>
+                    <select name="days" id="days" class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option selected="selected">3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                    </select>
+                </form>
+            </section>
+            </div>
+        </div>
+        <br>
+        <section class="map">Map goes here</section>
+    </main>
+<footer></footer>
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script><script src="js/bootstrap.js"></script>
+
+<script src="js/weather-map.js"></script>
+</body>
+</html>
