@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+
+    <title>ES6 Lecture</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="#">
+
+</head>
+<body>
+
+    <main class="container">
+
+        <h1>ES6 Highlights</h1>
+
+        <ul>
+            <li>Dog</li>
+            <li>Cat</li>
+            <li>Fish</li>
+        </ul>
+
+    </main>
+
+    <!-- jQuery Version 2.2.4 -->
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <!-- Custom JS -->
+    <script>
+
+/*
+
+ Be sure to turn on ES6 syntax highlighting by doing the following:
+  -> go to preferences hitting the command key plus the comma key
+      -> click on "Languages & Frameworks"
+          -> click on the first choice, "JavaScript
+              -> select from the dropdown "ECMAScript 6" and check on "prefer strict mode"
+              -> hit the "Apply" button
+
+*/
+
+    { // wrapping code in simple curly braces is the new IIFE...if you avoid declaring variables with var
+
+        "use strict";
+
+//            ============================ let and const
+//            - used for declaring variables
+
+
+                let greeting = "hello";
+                console.log(greeting);
+
+                const texasGreeting = "howdy";
+                console.log(greeting);
+
+
+    // let and const are block-scoped
+
+                if (true) {
+                    let name = "John";
+                }
+                console.log(name); // empty
+
+    // const value cannot be changed
+
+                const texan = true;
+
+                texan = false; // error
+
+
+//          ============================ template strings
+//          - used for simpler concatenation
+
+                const name = `William`;
+                console.log(name);
+
+                const greeting = `Hello ${name}!`;
+                console.log(greeting);
+
+
+    // literally represents line breaks and can handle any in-string quotes
+
+                const reporter = `He said "I'm so sorry..."
+and "BOOM goes the dynamite!"`;
+
+                console.log(reporter);
+
+
+//          ============================ for..of loop
+//          - iterates over node lists too
+
+                let foods = ["Pizza", "Hot Dogs", "Burgers"];
+
+                for (let food of foods) {
+                    console.log(food);
+                }
+
+                const pets = document.getElementsByTagName("li");
+
+                for (const pet of pets) {
+                    console.log(pet);
+                }
+
+
+//          ============================ arrow functions
+//          - cleaner function expression syntax
+
+
+    // ES5 function expression
+
+                var oldFunctionExpression = function () {
+                    console.log("Do things");
+                };
+
+                oldFunctionExpression();
+
+    // ES6 function expression
+
+                let newFunctionExpression = () => {
+                    console.log("Do other things");
+                };
+
+                newFunctionExpression();
+
+
+    // ES5 function expression
+
+                var oldExpressionAdd = function (num1, num2) {
+                    return num1 + num2;
+                };
+
+                console.log(oldExpressionAdd(2, 3));
+
+    // ES6 function expression
+
+                const newExpressionAdd = (num1, num2) => { return num1 + num2 };
+
+    // shorter version using implied return statement...
+
+                    const newExpressionAdd = (num1, num2) => num1 + num2;
+
+    // if only one parameter is defined, the parenthesis can be omitted...
+
+                    const addTwo = num => num += 2;
+
+
+//          ============================ object assignment and destructuring
+//          - simpler extraction of object properties into variables and vice versa
+
+
+    // assignment
+
+                    let name = "Spike";
+                    let age = 3;
+                    let animal = "Dog";
+
+                    let pet = {
+                        name,
+                        age,
+                        animal
+                    };
+
+                    console.log(pet.name);
+
+
+    // destructuring
+
+                    let car = {
+                        make: "Toyota",
+                        model: "Camry",
+                        year: "2007",
+                        color: "Red"
+                    };
+
+                    let { make, model, year, color } = car;
+
+                    console.log(make);
+                    console.log(model);
+                    console.log(year);
+                    console.log(color);
+
+
+    // using with functions
+
+                        const getArea = ({ height, width }) => height * width;
+
+                        let shape = {
+                            height: 20,
+                            width: 10
+                        };
+
+                        console.log(getArea(shape));
+
+    // or
+                        let height = 20;
+                        let width = 10;
+
+                        console.log(getArea({ height, width }));
+
+
+    // also can be done with arrays
+
+                    let instructors = ["Ryan", "Luis", "Zach", "Fer", "Justin"];
+                    let [instructor1, instructor2, instructor3, instructor4, instructor5] = instructors;
+
+                    console.log(instructor5);
+
+
+    }
+
+    </script>
+
+</body>
+</html>

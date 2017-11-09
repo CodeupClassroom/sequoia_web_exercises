@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+
+    <title>Map Filter Reduce Exercise</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous">
+
+</head>
+<body>
+
+<main class="container">
+
+    <h1>Map Filter Reduce Exercise</h1>
+
+</main>
+
+<!-- jQuery Version 2.2.4 -->
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+<!-- Custom JS -->
+<script>
+
+    {
+        "use strict";
+
+        const users = [
+            {
+                id: 1,
+                name: 'ryan',
+                email: 'ryan@codeup.com',
+                languages: ['clojure', 'javascript']
+            },
+            {
+                id: 2,
+                name: 'luis',
+                email: 'luis@codeup.com',
+                languages: ['java', 'scala', 'php']
+            },
+            {
+                id: 3,
+                name: 'zach',
+                email: 'zach@codeup.com',
+                languages: ['javascript', 'bash']
+            },
+            {
+                id: 4,
+                name: 'fernando',
+                email: 'fernando@codeup.com',
+                languages: ['java', 'php', 'sql']
+            },
+            {
+                id: 5,
+                name: 'justin',
+                email: 'justin@codeup.com',
+                languages: ['html', 'css', 'javascript', 'php']
+            }
+        ];
+
+
+//            Use .filter to create an array of user objects where each
+//            user object has at least 3 languages in the languages array.
+
+        const filteredUsers = users.filter((element) => {
+            return element.languages.length >= 3;
+        });
+
+        console.log(filteredUsers);
+
+
+//            Use .map to create an array of strings where each element is a user's email address
+
+//        let arrayOfEmails = [];
+//
+//        users.forEach((element) => {
+//            arrayOfEmails.push(element.email);
+//        });
+
+
+        // longer version
+        let arrayOfEmails = users.map((element) => {
+            return element.email;
+        });
+
+        // shorter version
+        let arrayOfEmails = users.map(({email}) => email);
+
+        console.log(arrayOfEmails);
+
+
+//            Use .reduce to transform the array into an object where the
+//            object's keys are ids and the values are objects that represent each user
+
+
+        const usersObject = users.reduce((accumulator, element) => {
+
+        }, {});
+
+
+
+    }
+
+</script>
+
+</body>
+</html>
