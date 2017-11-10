@@ -68,7 +68,7 @@ const dateOfLastCommit = username => {
     const url = `https://api.github.com/users/${username}/events/public`;
     const options = {
         headers: {
-            'Authorization': 'token c2ed306a0c819d482dd7cce7bfd691b2e78ef4cd'
+            'Authorization': 'token YOUR_TOKEN_HERE'
         }
     };
     return fetch(url, options)
